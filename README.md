@@ -3,6 +3,9 @@
 # ProcessPriorityManager
 A small tool to automate setting multiple process priorities.
 
+# Info
+To change the priority of processes running owned by admin, you have to run this ProcessPriorityManager also with admin rights (right click exe -> run as admin).
+
 
 # Download prebuild executable:
 [Download ProcessPriorityManager v0.0.2](https://github.com/Crypto90/ProcessPriorityManager/releases/download/0.0.2/Crypto90s_Process_Priority_Manager.exe)
