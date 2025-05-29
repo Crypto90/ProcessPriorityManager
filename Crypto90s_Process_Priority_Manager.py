@@ -4,6 +4,10 @@ import json
 import os
 import tkinter as tk
 from tkinter import ttk
+import webbrowser
+
+
+current_version = "v0.0.2"
 
 CONFIG_FILE = "process_priority_config.json"
 
@@ -171,8 +175,8 @@ class ProcessPriorityApp:
         remove_btn.pack(side=tk.LEFT, padx=5)
 
         reload_btn = tk.Button(btn_frame, text="Reload", command=self.load_processes,
-                               bg="#ff8c00", fg=dark_fg,  # orange
-                               activebackground="#cc7000",
+                               bg="#2980b9", fg=dark_fg,  # blue
+                               activebackground="#1f6391",  # darker shade of #2980b9
                                activeforeground="#ffffff", cursor="hand2")
         reload_btn.pack(side=tk.LEFT, padx=5)
 
@@ -181,6 +185,13 @@ class ProcessPriorityApp:
                                      activebackground="#5a0000",
                                      activeforeground="#ffffff", cursor="hand2")
         reset_config_btn.pack(side=tk.LEFT, padx=5)
+        
+        tk.Button(btn_frame, text="Buy me a Coffee ☕", 
+              bg="#f39c12", fg="black", 
+              activebackground="#d68910", activeforeground="black",
+              cursor="hand2",
+              command=lambda: webbrowser.open("https://ko-fi.com/crypto90")).pack(side="left", padx=5)
+
 
 
         # Console frame at the bottom
@@ -198,7 +209,15 @@ class ProcessPriorityApp:
         # Bind Treeview mouse motion for hand cursor on headers and rows
         self.tree.bind("<Motion>", self.on_tree_motion)
         self.tree.bind("<Leave>", lambda e: self.tree.configure(cursor=""))
-
+        
+        
+        # Adding copyright and thanks message to the log output
+        self.log(f"------------------------------------------------")
+        self.log(f"Crypto90's Process Priority Manager {current_version}. All rights reserved.")
+        self.log(f"Thanks for using! Find the source code here:\nhttps://github.com/Crypto90/ProcessPriorityManager")
+        self.log(f"------------------------------------------------")
+        
+        
         # Initialize
         self.load_processes()
     
