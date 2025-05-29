@@ -8,7 +8,7 @@ A small tool to automate setting multiple process priorities.
 [Download ProcessPriorityManager v0.0.2](https://github.com/Crypto90/ProcessPriorityManager/releases/download/0.0.2/Crypto90s_Process_Priority_Manager.exe)
 
 # Screenshot:
-![image](https://github.com/user-attachments/assets/2a8b2232-f26b-4dcc-b5db-a2b6728ad524)
+![image](https://github.com/user-attachments/assets/68612f72-12b8-4de9-bf6c-279eb4940efc)
 
 
 # Build executable
